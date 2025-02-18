@@ -1,11 +1,10 @@
 <?php
 namespace Formacom\controllers;
-
-require_once("./core/Controller.php");
+use Formacom\Core\Controller;
 class HomeController extends Controller{
     public function index(...$params){
         $data = ['mensaje' => '¡Bienvenido a la página de inicio!'];
-        $this->view('home', $data);
+        $this->render('home', $data);
     }
     public function new(){
         echo "Hola desde New de HomeController";

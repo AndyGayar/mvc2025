@@ -6,8 +6,7 @@ use Formacom\models\Actor;
 class ActorController extends Controller{
     public function index(...$params){
         $actores=Actor::all();
-        var_dump($actores);
-        exit();
+        $this->view("actor_list",$actores);
         //echo "hola desde index de ActorController";
     }
     public function new(...$params){

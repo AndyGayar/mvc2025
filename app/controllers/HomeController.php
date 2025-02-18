@@ -4,7 +4,7 @@ use Formacom\Core\Controller;
 class HomeController extends Controller{
     public function index(...$params){
         $data = ['mensaje' => '¡Bienvenido a la página de inicio!'];
-        $this->render('home', $data);
+        $this->view('home', $data);
     }
     public function new(){
         echo "Hola desde New de HomeController";

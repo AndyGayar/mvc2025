@@ -18,6 +18,17 @@ class ActorController extends Controller{
         }
        
     }
+    public function json(){
+        $actores=Actor::where("first_name","like","P%");
+        $datos=[
+            "mensaje"=>"Listado actores empiezan P",
+            "listado"=>$actores
+        ];
+        $json=json_encode($datos);
+        header('Content-Type: application/json');
+        echo $json;
+        exit();
+    }
 
 }
 ?>

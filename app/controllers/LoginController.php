@@ -17,6 +17,11 @@ class LoginController extends Controller{
         }
        
     }
+
+    public function register(...$params){
+        $this->view("register");
+    }
+
     public function json(){
         $actores=Actor::where("first_name","like","P%")->get();
         $datos=[
